@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LaterGatorProject</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <div class="container">
+     <ul class="nav nav-tabs">
+    <li><%= link_to "Home", welcome_index_path %></li>
+    <li><%= link_to "About", welcome_about_path %></li>
+  </ul>
+<div class="container">
+  <div class="jumbotron">
+    <h1> Welcome to Later Gator Bookmark Saver</h1>
+    <p>Manage your bookmakrs and share with your friends!</p>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Later Gator What You Want</h3>
+      <p>It's easy enough to bookmark a URL in your browser, but eventually your bookmark library may get cluttered and it may require effort to manage bookmarks.  Later Gator will  organize your bookmarks by topic so you can quickly find what you want to read later.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>Easily Add Bookmarks</h3>
+      <p>Create topics easily by clicking on the "New Topics" button. Add your URL bookmarks by pasting them in the "Add New Bookmark" section.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>Be Social!</h3>
+      <p>Share bookmarks with friends, view other public bookmarks, make comments and rank public bookmakes to see the best</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</body>
+</html>
