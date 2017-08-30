@@ -24,12 +24,15 @@ source 'https://rubygems.org'
  group :development, :test do
    gem 'byebug'
    gem 'spring'
-   gem 'rspec-rails'
+   gem 'rspec-rails', '~> 3.0'
    gem 'shoulda'
    gem 'faker'
    gem 'factory_girl_rails'
    gem 'pry-rails'
+   gem 'simplecov'
  end
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
+gem 'devise'
+gem 'bcrypt'
