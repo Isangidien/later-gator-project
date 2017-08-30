@@ -29,6 +29,7 @@ source 'https://rubygems.org'
    gem 'faker'
    gem 'factory_girl_rails'
    gem 'pry-rails'
+   gem 'simplecov'
  end
 
 gem 'bootstrap-sass', '~> 3.3.1'
