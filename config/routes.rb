@@ -1,8 +1,18 @@
 Rails.application.routes.draw do
+  get 'topics/index'
+
+  get 'topics/show'
+
+  get 'topics/new'
+
+  get 'topics/edit'
+
   devise_for :users,controllers: {
     sessions: 'users/sessions'
   }
+  resources :topics 
 
+  post :incoming, to: 'incoming#create'
   get 'welcome/contact'
 
   get 'about' => 'welcome#about'
