@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe TopicsController, type: :controller do
 
-  let (:my_topic) { create(:topic) }
   let (:user)     { create(:user) }
+  let (:my_topic) { create(:topic, user: my_user) }
 
   describe "GET index" do
     it "returns http success" do
@@ -11,10 +11,10 @@ RSpec.describe TopicsController, type: :controller do
       expect(response).to have_http_status(:success)
     end
 
-    it "assigns my_topic to @topics" do
-      get :index
-      expect(assigns(:topics)).to eq([my_topic])
-     end
+    it "assigns Topic.all to topic" do
+        get :index
+        expect(assigns(:topics)).to include(my_topic)
+    end
   end
 
   describe "GET show" do

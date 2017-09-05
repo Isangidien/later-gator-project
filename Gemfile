@@ -30,9 +30,12 @@ source 'https://rubygems.org'
    gem 'factory_girl_rails'
    gem 'pry-rails'
    gem 'simplecov'
+   gem 'better_errors'
+   gem 'binding_of_caller'
  end
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'bcrypt'
+gem 'pundit'

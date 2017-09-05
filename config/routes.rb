@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
-  get 'topics/index'
 
-  get 'topics/show'
+  devise_for :users
 
-  get 'topics/new'
+  resources :topics do
+    resources :bookmarks
+  end
 
-  get 'topics/edit'
+  resources :bookmarks, except: [:index]
 
-  devise_for :users,controllers: {
-    sessions: 'users/sessions'
-  }
-  resources :topics 
+  resources :users, only: [:new, :index, :show]
 
   post :incoming, to: 'incoming#create'
+
   get 'welcome/contact'
 
   get 'about' => 'welcome#about'
