@@ -19,7 +19,7 @@ def create
     flash[:notice] = "Topic was saved successfully."
     redirect_to @topic
   else
-    flash[:error] = "There was an error creating the topic. Please try again."
+    flash[:alert] = "There was an error saving the topic. Please try again."
     render :new
   end
 end
@@ -37,7 +37,7 @@ def update
     flash[:notice] = "Topic was updated"
     redirect_to @topic
   else
-    flash[:error] = "Error saving topic. Please try again."
+    flash[:alert] = "Error saving topic. Please try again."
     render :edit
   end
 end
@@ -49,7 +49,7 @@ def destroy
     flash[:notice] = "\"#{@topic.title}\" was deleted successfully."
     redirect_to topics_path
   else
-    flash[:error] = "There was an error deleting the topic."
+    flash[:alert] = "There was an error deleting the topic."
     render :show
   end
 end

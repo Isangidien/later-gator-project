@@ -7,7 +7,7 @@ RSpec.describe BookmarksController, type: :controller do
     sign_in @my_user
     @my_topic = Topic.create!(title: Faker::Lorem.word, user: @my_user)
     @my_bookmark = Bookmark.create!(url: "tv.com", user: @my_user, topic: @my_topic)
-  end  
+  end
 
   describe "GET #show" do
     it "returns http success" do
