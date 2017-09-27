@@ -6,7 +6,7 @@ RSpec.describe BookmarksController, type: :controller do
     @my_user = FactoryGirl.create(:user)
     sign_in @my_user
     @my_topic = Topic.create!(title: Faker::Lorem.word, user: @my_user)
-    @my_bookmark = Bookmark.create!(url: "tv.com", user: @my_user, topic: @my_topic)
+    @my_bookmark = Bookmark.create!(url: "tv.com", topic: @my_topic)
   end
 
   describe "GET #show" do
