@@ -7,9 +7,10 @@ Rails.application.routes.draw do
   end
 
   resources :bookmarks, except: [:index] do
-    resources :likes, only: [:index, :create, :destroy]
+  resources :likes, only: [:index, :create, :destroy]
   end
-  resources :users, only: [:new, :index, :show]
+
+  resources :users, only: [:index, :show]
 
   post :incoming, to: 'incoming#create'
 
