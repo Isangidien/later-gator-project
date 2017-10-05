@@ -8,8 +8,7 @@
 5.times do
   user = User.create!(
     email:        Faker::Internet.email,
-    password:     Faker::Internet.password,
-    confirmed_at: Time.now
+    password:     Faker::Internet.password
   )
 end
 users = User.all
@@ -17,17 +16,18 @@ users = User.all
 15.times do
   Topic.create!(
     user:  users.sample,
-    title: Faker::Name.title,
+    title: Faker::Name.title
   )
 end
 topics = Topic.all
 
 
-# Create posts
+# Create bookmark
 20.times do
 
-post = Bookmark.create!(
+  Bookmark.create!(
     topic: topics.sample,
+    user:  users.sample,
     url:   Faker::Internet.url
   )
 end
@@ -36,8 +36,7 @@ bookmarks = Bookmark.all
 # Create an admin user
 admin = User.create!(
 email:    'admin@example.com',
-password: 'helloworld',
-confirmed_at: Time.now,
+password: 'helloworld'
 )
 
 
